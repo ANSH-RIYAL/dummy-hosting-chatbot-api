@@ -129,6 +129,10 @@ def get_gemini_response(user_id, message):
         print(f"API Request failed: {e}")
         return "Sorry, I'm having trouble connecting to the service."
 
+@app.route('/test', methods=['GET'])
+def test():
+    return 'CHATBOT IS LIVE'
+    
 @app.route('/api', methods=['POST'])
 def api():
     print(request.json)
